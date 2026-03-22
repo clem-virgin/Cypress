@@ -1,12 +1,14 @@
 describe('LOGIN', () => {
+  beforeEach(()=>{
+    cy.visit('https://automationexercise.com/login')
+  })
 
   it('Verify user can signup successfully', () => {
-    cy.visit('http://automationexercise.com/login')
     cy.get('.signup-form').should('exist')
     cy.get('[data-qa="signup-name"]').should('be.empty').type('oluwaseun')
     cy.get('[data-qa="signup-name"]').should('have.value', 'oluwaseun')
-    cy.get('[data-qa="signup-email"]').should('be.empty').type('seunfunmi112@gmail.com')
-    cy.get('[data-qa="signup-email"]').should('have.value','seunfunmi112@gmail.com')
+    cy.get('[data-qa="signup-email"]').should('be.empty').type('s2eunfunmi112@gmail.com')
+    cy.get('[data-qa="signup-email"]').should('have.value','s2eunfunmi112@gmail.com')
     cy.get('[data-qa="signup-button"]').should('be.visible')
     cy.get('[data-qa="signup-button"]').click()
     cy.get('#id_gender1').click()
@@ -42,7 +44,6 @@ describe('LOGIN', () => {
    })
 
    it.only('Verify successful login and add to cart', () => {
-     cy.visit('http://automationexercise.com/login')
      cy.get('.shop-menu > .nav > :nth-child(4) > a').click()
      cy.get('.login-form').should('exist')
      cy.get('[data-qa="login-email"]').should('be.empty').type('seunfunmi11@gmail.com')
@@ -51,7 +52,6 @@ describe('LOGIN', () => {
      cy.get('[data-qa="login-password"]').should('have.value', 'Tolulope2')
      cy.get('[data-qa="login-button"]').should('exist')
      cy.get('[data-qa="login-button"]').click()
-     cy.get('.nav > :nth-child(10)').should('be.visible')
      cy.get('.features_items').should('be.visible')
      cy.get(':nth-child(4) > .product-image-wrapper > .single-products > .productinfo > .btn').contains('Add to cart').click()
      cy.contains('Continue Shopping').click()
