@@ -21,14 +21,7 @@ export const elements = {
     "loginButton": ':nth-child(5) > .button',
 
 
-// "firstnameField": '[name="firstName"]',
-// "lastnameField": '[name="lastName"]',
-// "addressField": '[name="address.street"]',
-// "cityField": '[name="address.city"]',
-// "stateField": '[name="address.state"]',
-// "zipcodeField": '[name="address.zipCode"]',
-// "ssnField": '[name="ssn"]',
-// "loginButton": '[colspan="2"] > .button',
+
 
 "firstname": 'olayiwola',
 "lastname": 'jamiu',

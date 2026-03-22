@@ -22,7 +22,7 @@ describe('POM', () => {
     cy.get(elements.signButton).should('be.visible').click()
   })
 
-  it.only('Verify user can login successfully', () => {
+  it ('Verify user can login successfully', () => {
     cy.get(elements.loginForm).should('exist')
     cy.get(elements.usernameLoginField).should('be.empty').type(elements.username)
     cy.get(elements.passwordLoginField).should('be.empty').type(elements.password)
