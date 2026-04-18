@@ -1,8 +1,13 @@
+let xam
 import {elements} from '../fixtures/pomelements'
+
 
 describe('POM', () => {
   beforeEach(()=>{
-    cy.visit('https://parabank.parasoft.com/parabank/lookup.htm')
+    cy.visit('/')
+    cy.fixture('freshpomxample').then((fresh) => {
+      xam=fresh
+    })
   })
 
   it('Verify user can register successfully', () => {
@@ -22,11 +27,16 @@ describe('POM', () => {
     cy.get(elements.signButton).should('be.visible').click()
   })
 
-  it ('Verify user can login successfully', () => {
-    cy.get(elements.loginForm).should('exist')
-    cy.get(elements.usernameLoginField).should('be.empty').type(elements.username)
-    cy.get(elements.passwordLoginField).should('be.empty').type(elements.password)
-    cy.get(elements.loginButton).should('be.visible').click()
+  it.only ('Verify user can login successfully', () => {
+    
+          cy.get(xam.loginForm).should('exist')
+          cy.get(xam.usernameLoginField).should('be.empty').type(xam.username)
+          cy.get(xam.passwordLoginField).should('be.empty').type(xam.password)
+          cy.get(xam.loginButton).should('be.visible').click()
+    // cy.get(elements.loginForm).should('exist')
+    // cy.get(elements.usernameLoginField).should('be.empty').type(elements.username)
+    // cy.get(elements.passwordLoginField).should('be.empty').type(elements.password)
+    // cy.get(elements.loginButton).should('be.visible').click()
+    })
   })
 
-})

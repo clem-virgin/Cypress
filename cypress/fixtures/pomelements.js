@@ -15,10 +15,10 @@ export const elements = {
     "signupForm": '.form2',
     "signButton": '[colspan="2"] > .button',
 
-    "loginForm": '[name="login"]',
-    "usernameLoginField": '[name="username"]',
-    "passwordLoginField": '[name="password"]',
-    "loginButton": ':nth-child(5) > .button',
+    // "loginForm": '[name="login"]',
+    // "usernameLoginField": '[name="username"]',
+    // "passwordLoginField": '[name="password"]',
+    // "loginButton": ':nth-child(5) > .button',
 
 
 
@@ -31,7 +31,7 @@ export const elements = {
 "zipcode": '27403',
 "number": '6279272073',
 "ssn": '748293635',
-"username": 'olayiwolajamiu',
+"username": 'jamiupom',
 "password": 'mycypress21',
 "confirm": 'mycypress21'
 }
