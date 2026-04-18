@@ -22,12 +22,7 @@ class registrationPage {
     createaccountbutton = '[data-qa="create-account"]'
     continuebutton = '[data-qa="continue-button"]'
 
-    //LOGIN
-    loginemailaddressfield = '[data-qa="login-email"]'
-    loginpasswordfield = '[data-qa="login-password"]'
-    loginbutton = '[data-qa="login-button"]'
-    loginemail = 'seunfunmi11@gmail.com'
-    password = 'Tolulope2'
+    
 
     setName(){
         const randomName = faker.person.middleName()
@@ -130,16 +125,6 @@ class registrationPage {
     }
 
 
-    setLoginEmailAddress(){
-        cy.get(this.loginemailaddressfield).type(this.loginemail)
-    }
-
-    setPassword(){
-        cy.get(this.loginpasswordfield).type(this.password)
-    }
-
-    setLoginButton(){
-        cy.get(this.loginbutton).click()
-    }
+    
 }
 export default registrationPage

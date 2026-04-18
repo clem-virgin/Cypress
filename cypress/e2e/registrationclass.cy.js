@@ -1,5 +1,7 @@
 import registrationPage from '../registrationclassPOM/registration'
+import loginPage from '../registrationclassPOM/login'
 const reg = new registrationPage
+const log = new loginPage
 
 describe('registration', () => {
     beforeEach(()=> {
@@ -28,9 +30,9 @@ it('Verify user can register successfully', () => {
     reg.setContinueButton()
 })
 
-it.only('verify LOGIN', () => {
-    reg.setLoginEmailAddress()
-    reg.setPassword()
-    reg.setLoginButton()
+it('verify LOGIN', () => {
+    log.setLoginEmailAddress()
+    log.setPassword()
+    log.setLoginButton()
 })
 })
