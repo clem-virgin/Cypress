@@ -1,9 +1,0 @@
-{
-        "loginForm": "[name='login']",
-    "usernameLoginField": "[name='username']",
-    "passwordLoginField": "[name='password']",
-    "loginButton": ":nth-child(5) > .button",
-
-    "username": "jamiupom",
-"password": "mycypress21"
-}
